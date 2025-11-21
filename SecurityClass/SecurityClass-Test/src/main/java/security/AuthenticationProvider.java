@@ -1,5 +1,3 @@
-// interfata de baza pentru - Strategy Pattern
-
 package security;
 
 import network.Request;
