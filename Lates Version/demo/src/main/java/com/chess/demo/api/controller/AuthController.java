@@ -9,6 +9,10 @@ import com.chess.demo.api.dto.auth.RegisterDto;
 import com.chess.demo.api.repository.UserRepository;
 import com.chess.demo.api.security.JwtService;
 import com.chess.demo.api.service.PlayerService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -23,6 +27,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/auth")
 @CrossOrigin(origins = "*")
+@Tag(name = "Authentication", description = "Endpoints for login and player registration")
 public class AuthController {
 
     private final UserRepository userRepository;
@@ -42,6 +47,15 @@ public class AuthController {
         this.userRepository = userRepository;
     }
 
+    @Operation(
+            summary = "Login a user",
+            description = "Authenticates the user and returns a JWT token"
+    )
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Successfully authenticated"),
+            @ApiResponse(responseCode = "401", description = "Invalid credentials"),
+            @ApiResponse(responseCode = "404", description = "User not found")
+    })
     @PostMapping("/login")
     public ResponseEntity<AuthResponseDto> login(@RequestBody AuthRequestDto request) throws Exception {
         AuthenticationManager authManager = authenticationConfiguration.getAuthenticationManager();
@@ -54,6 +68,14 @@ public class AuthController {
         return ResponseEntity.ok(new AuthResponseDto(jwt, user.getEmail(), user.getRole(), user.getId()));
     }
 
+    @Operation(
+            summary = "Register a new player",
+            description = "Creates a new player and returns a JWT token for immediate login"
+    )
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Player registered successfully"),
+            @ApiResponse(responseCode = "400", description = "Email is already registered")
+    })
     @PostMapping("/register/player")
     @Transactional
     public ResponseEntity<?> registerPlayer(@RequestBody RegisterDto request)
