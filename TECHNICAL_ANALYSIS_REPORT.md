@@ -70,6 +70,8 @@ The project is organized into the following major modules:
 - **Focus:** Core game logic and move validation
 
 #### **D. Latest Version Module** (`/Lates Version`)
+> **Note:** Directory name contains typo - "Lates Version" instead of "Latest Version"
+
 - **Technology:** Spring Boot (latest iteration)
 - **Purpose:** Most recent implementation with full features
 - **Includes:** Complete game lobby system, authentication, and move management

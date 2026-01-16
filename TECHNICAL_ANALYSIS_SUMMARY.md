@@ -84,7 +84,7 @@
 ```
 chess-aset/
 ├── FirstComponents/      # Full-featured backend implementation
-├── Lates Version/        # Latest iteration with improvements
+├── Lates Version/        # Latest iteration (note: directory name has typo)
 ├── Gamer Server/         # Simplified game server
 ├── RepositoryClass/      # Data access layer examples
 ├── SecurityClass/        # Security implementation + tests
