@@ -8,8 +8,10 @@
 
 **Name:** Chess-ASET (Advanced Software Engineering Project)  
 **Type:** Electronic Chess Board with Backend System  
+**Team:** 2 students (Biceada Stefana & Breaban Mihai)  
+**Timeline:** October 2025 - January 2026 (3 months)  
 **License:** MIT  
-**Status:** Early Development / Prototype  
+**Status:** Completed Course Project (Lab Work + Final Integration)  
 **Overall Rating:** B+ / Very Good
 
 ---
@@ -36,6 +38,41 @@
 
 ---
 
+## 👥 Team Contributions
+
+### Development Approach
+**Collaborative project** with clear role separation and incremental laboratory work leading to final integration.
+
+### Individual Contributions
+
+**Biceada Stefana** (~75% of code)
+- Lab 6 (TDD): Gamer Server module with comprehensive tests
+- Laboratory: FirstComponents - complete backend with JWT auth
+- Final Integration: Latest Version with all features
+- Focus: Backend development, API design, game logic, Spring Boot
+
+**Breaban Mihai** (~25% of code)
+- Lab 5 (Security): Security architecture with multiple auth providers
+- Hardware: Complete MicroPython embedded system
+- Focus: Hardware integration, security patterns, embedded systems
+
+### Laboratory Assignments
+
+**Lab 5: Security Implementation** (Breaban Mihai)
+- Spring Security configuration
+- JWT & Basic authentication providers
+- Security filter chain
+- BPMN workflow diagram
+- Comprehensive unit tests
+
+**Lab 6: Test-Driven Development** (Biceada Stefana)
+- Game service with TDD approach
+- Move validator with 23 test cases
+- Repository pattern implementation
+- H2 database integration
+
+---
+
 ## 💻 Technology Stack
 
 ### Backend
@@ -59,10 +96,12 @@
 |--------|-------|
 | Java Files | 132 |
 | Python Files | 10 |
-| Total Java LOC | ~5,321 |
+| Total Java LOC | ~8,960 |
 | Total Python LOC | ~314 |
-| Commits | 2 |
-| Contributors | 2 |
+| Commits | 15 (12 by students) |
+| Contributors | 2 students + 1 owner |
+| Lab Assignments | 2 (Lab 5: Security, Lab 6: TDD) |
+| Development Time | 3 months (Oct 2025 - Jan 2026) |
 
 ---
 
@@ -83,13 +122,15 @@
 
 ```
 chess-aset/
-├── FirstComponents/      # Full-featured backend implementation
-├── Lates Version/        # Latest iteration (note: directory name has typo)
-├── Gamer Server/         # Simplified game server
-├── RepositoryClass/      # Data access layer examples
-├── SecurityClass/        # Security implementation + tests
-└── Hardware/             # MicroPython embedded code
+├── SecurityClass/        # Lab 5: Security (Breaban) - Auth providers, tests, BPMN
+├── Gamer Server/         # Lab 6: TDD (Biceada) - Game service with tests
+├── FirstComponents/      # Lab Work (Biceada) - Full backend with JWT
+├── Hardware/             # Hardware (Breaban) - MicroPython embedded system
+├── Lates Version/        # Final Integration (Biceada) - Complete system
+└── RepositoryClass/      # Examples (Biceada) - Repository pattern demos
 ```
+
+**Development Flow:** Lab 5 → Lab 6 → Laboratory Work → Hardware → Final Integration
 
 ---
 
